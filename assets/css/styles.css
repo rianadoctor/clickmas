@@ -1,2 +1,49 @@
-@font-face { font-family: I-pixel-u; src: url('I-pixel-u.ttf'); } 
-@font-face { font-family: I-pixel-u; font-weight: bold; src: url('I-pixel-u.ttf');}
+
+
+
+.start-button{
+    display: block;
+    position: relative;
+    bottom: 75px;
+    left: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65px;
+    width: 220px;
+    border-radius: 30px;
+    opacity: 0%;
+    cursor: pointer;
+
+
+    
+}
+
+
+
+.lights{
+    position: relative;
+    bottom: 210px;
+    right: 280px;
+}
+
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+
+.first{
+    background-image: url('file:///Users/doctor/Desktop/lights.gif');
+    background-size: 400px;
+    background-repeat: repeat-x;
+    background-position: top;
+}
+
+
+.inv{
+    opacity: 0%;
+}
+
