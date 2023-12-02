@@ -5,3 +5,23 @@
     margin-right: auto;
     width: 50%;
 }
+
+
+
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.floating-image {
+    animation: floatUpDown 2s ease-in-out infinite;
+}
+
+.task{
+    font-size: 45px;
+}
