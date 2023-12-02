@@ -11,21 +11,28 @@
 <body>
     <!-- visible content goes here -->  
     <div class="container">
-        <div>
-            <p class="task">
-                Your office is having 
-                a Christmas party and 
-                everyone has been 
-                asked to bring this hat.<br>
-                Your job is to find and 
-                purchase this hat 
-                before they sell out!
-            </p>
-            <img src="../assets/img/card.png" alt="Hat Card" class="card floating-image" style="width:300px;">
+        <p class="task">
+            Your office is having 
+            a Christmas party and 
+            everyone has been 
+            asked to bring this hat.<br>
+            Your job is to find and 
+            purchase this hat 
+            before they sell out!
+        </p>
+        <div class="card-container" onclick="flipCard(this)">
+            <div class="card">
+                <div class="card-front">
+                    <img src="../assets/img/card.png" alt="Hat Card" class="card floating-image" style="width:300px;">
+                </div>
+                <div class="card-back">
+                    <!-- Content on the back of the card goes here -->
+                    <img src="../assets/img/card-back.png" alt="Hat Card Back" style="width:300px;">
+                </div>
+            </div>
         </div>
-
     </div>
     
     <script src="assets/js/main.js"></script>
-   
+</body>
 </html>
