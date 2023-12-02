@@ -12,9 +12,3 @@ document.getElementById('card').addEventListener('click', function () {
         button.style.display = 'block'; // Hide the button
     }
 });
-
-
-
-document.getElementById('searchInput').addEventListener('input', function() {
-    this.value = 'hat' + this.value.slice(this.value.lastIndexOf(' '));
-});
