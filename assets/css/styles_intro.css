@@ -1,11 +1,27 @@
+
 .task{
     font-size: 30px;
+    text-align: center;
 }
+
+
 .card{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+.card {
+    cursor: pointer;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 3s;
 }
 
 @keyframes floatUpDown {
@@ -21,20 +37,7 @@
     animation: floatUpDown 2s ease-in-out infinite;
 }
 
-.card-container {
-    perspective: 1000px;
-    cursor: pointer;
-}
-
-.card {
-    width: 300px;
-    height: 400px;
-    transform-style: preserve-3d;
-    transition: transform 3s;
-    
-}
-
-.card:hover {
+.card.flipped {
     transform: rotateY(180deg);
 }
 
