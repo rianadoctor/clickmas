@@ -8,6 +8,12 @@ if (searchInput) {
 
 var searchInput = document.getElementById("searchInput");
 var suggestions = ['Christmas hat', 'Green hat', 'Dog hats', 'Kids hats'];
+var suggestionUrls = [
+    'christmas-hat.html',
+    'https://example.com/green-hat',
+    'https://example.com/dog-hats',
+    'https://example.com/kids-hats'
+];
 
 if (searchInput) {
     searchInput.addEventListener('input', function (event) {
@@ -31,9 +37,12 @@ function showSuggestions() {
     var suggestionList = document.getElementById('suggestionList');
     if (suggestionList) {
         suggestionList.innerHTML = '';
-        suggestions.forEach(function (suggestion) {
+        suggestions.forEach(function (suggestion, index) {
             var listItem = document.createElement('li');
-            listItem.textContent = suggestion;
+            var link = document.createElement('a')
+            link.textContent = suggestion;
+            link.href = suggestionUrls[index];
+            listItem.appendChild(link);
             suggestionList.appendChild(listItem);
         });
     }

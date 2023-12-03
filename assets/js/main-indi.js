@@ -41,6 +41,14 @@ function getProductDetailsById(productId) {
         6: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'Phone', description: 'Super Pixel Phone', imageFileName:'shop-6.png' },
         7: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'Phone', description: 'Super Pixel Phone', imageFileName:'shop-7.png' },
         8: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'Phone', description: 'Super Pixel Phone', imageFileName:'shop-8.png' },
+        9: { subtotal: 98.00, shipping: 2.00, total: 4818.00, price: 50, name: 'HAT', description: 'Super Pixel Vacuum', imageFileName:'hat-1.png' },
+        10: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'hat-2.png' },
+        11: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'shop-3.png' },
+        12: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'shop-4.png' },
+        13: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'shop-5.png' },
+        14: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'shop-6.png' },
+        15: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'shop-7.png' },
+        16: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'shop-8.png' },
     };
 
     

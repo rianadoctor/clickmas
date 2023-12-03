@@ -16,6 +16,19 @@
 
 
 
+
+#suggestionList a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+}
+
+#suggestionList a:hover {
+  background-color: #f0f0f0;
+}
+
+
 .suggestions-list {
   position: relative;
   top: 70px;
@@ -28,6 +41,7 @@
   background-color: #fff;
   border-top: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 s
 .suggestions-list li {
