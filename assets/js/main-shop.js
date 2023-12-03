@@ -10,9 +10,9 @@ var searchInput = document.getElementById("searchInput");
 var suggestions = ['Christmas hat', 'Green hat', 'Dog hats', 'Kids hats'];
 var suggestionUrls = [
     'christmas-hat.html',
-    'https://example.com/green-hat',
-    'https://example.com/dog-hats',
-    'https://example.com/kids-hats'
+    'green-hat.html',
+    'dog-hats.html',
+    'kids-hats.html'
 ];
 
 if (searchInput) {
