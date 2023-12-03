@@ -13,25 +13,23 @@
 
 
  /* Add this CSS to style the suggestion list */
- .d-flex{
-  width: 1000px;
- }
+
+
+
 .suggestions-list {
+  position: relative;
+  top: 70px;
+  width: 200px;
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  position: absolute;
-  right: 200px;
-  top: 45px;
-  width: 940px;
+  margin: 0;  right: 250px;
   max-height: 150px;
   overflow-y: auto;
   background-color: #fff;
-  border: 1px solid #ddd;
   border-top: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
+s
 .suggestions-list li {
   padding: 10px;
   cursor: pointer;

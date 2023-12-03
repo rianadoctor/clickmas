@@ -27,7 +27,7 @@ if (searchInput) {
 }
 
 function showSuggestions() {
-    // Show a list of suggestions (you can implement your own UI logic here)
+    // Show a list of suggestions 
     var suggestionList = document.getElementById('suggestionList');
     if (suggestionList) {
         suggestionList.innerHTML = '';
