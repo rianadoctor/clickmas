@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // If the user is not signed up, show a pop-up message
         if (!isUserSignedUp) {
             alert('You must sign up first before you can make any purchases.');
+            window.location.href = 'sign-up.html';
         } else {
             // If the user is signed up, proceed with the purchase logic
             // For demonstration purposes, log a message to the console
