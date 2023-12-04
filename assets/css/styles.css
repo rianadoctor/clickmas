@@ -36,7 +36,7 @@
 
 
 .first{
-    background-image: url('file:///Users/doctor/Desktop/lights.gif');
+    background-image: url('../img/lights.gif');
     background-size: 400px;
     background-repeat: repeat-x;
     background-position: top;
