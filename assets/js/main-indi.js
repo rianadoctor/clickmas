@@ -5,7 +5,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Use the product ID to update content
     updateProductDetails(productId);
+
+    // Get the buy button element
+    const buyButton = document.getElementById('buyButton');
+
+    // Attach a click event listener to the button
+    buyButton.addEventListener('click', function () {
+        // Check if the user is signed up (replace this condition)
+        const isUserSignedUp = checkIfUserIsSignedUp();
+
+        // If the user is not signed up, show a pop-up message
+        if (!isUserSignedUp) {
+            alert('You must sign up first before you can make any purchases.');
+        } else {
+            // If the user is signed up, proceed with the purchase logic
+            // For demonstration purposes, log a message to the console
+            console.log('User is signed up. Proceed with the purchase logic.');
+            // You can add your actual purchase logic or redirect the user to the purchase page here
+        }
+    });
 });
+
+
+function checkIfUserIsSignedUp() {
+    // Replace 
+    // For demonstration purposes, always return false
+    return false;
+}
 
 function updateProductDetails(productId) {
     const productDetails = getProductDetailsById(productId);
