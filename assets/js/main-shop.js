@@ -7,12 +7,12 @@ if (searchInput) {
 }
 
 var searchInput = document.getElementById("searchInput");
-var suggestions = ['Christmas hat', 'Green hat', 'Dog hats', 'Kids hats'];
+var suggestions = ['Christmas hats', 'Green hats', 'Caps', 'Green Christmas hats'];
 var suggestionUrls = [
     'christmas-hat.html',
-    'green-hat.html',
-    'dog-hats.html',
-    'kids-hats.html'
+    'green-hats.html',
+    'caps-hats.html',
+    'green-christmas-hats.html',
 ];
 
 if (searchInput) {
