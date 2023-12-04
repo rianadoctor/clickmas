@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function updateProductDetails(productId) {
-    // Replace this with your actual data retrieval logic
     const productDetails = getProductDetailsById(productId);
 
     // Update HTML content with product details
@@ -29,7 +28,6 @@ function updateProductDetails(productId) {
 }
 
 function getProductDetailsById(productId) {
-    // Replace this with your actual data retrieval logic
     const key = String(productId);
     const productDetails = {
         //Main page
