@@ -101,7 +101,7 @@ function getProductDetailsById(productId) {
     
         //Caps
         33:  { subtotal: 98.00,  shipping: 2.00,   total: 4818.00, price: 50, name: 'Pink Cap', description: 'Super Pixel Vacuum', imageFileName:'gc-1.png'},
-        34: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'gc-2.png' },
+        34: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Selling OUT SOON!', imageFileName:'gc-2.png' },
         35: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'gc-3.png' },
         36: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'gc-4.png' },
         37: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'gc-5.png' },
