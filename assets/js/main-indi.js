@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function () {
     // Get product ID from URL parameter
     const urlParams = new URLSearchParams(window.location.search);
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Attach a click event listener to the button
     buyButton.addEventListener('click', function () {
-        // Check if the user is signed up (replace this condition)
+        // Check if the user is signed up (replace this condition with your actual check)
         const isUserSignedUp = checkIfUserIsSignedUp();
 
         // If the user is not signed up, show a pop-up message
@@ -22,14 +23,16 @@ document.addEventListener('DOMContentLoaded', function () {
             // If the user is signed up, proceed with the purchase logic
             // For demonstration purposes, log a message to the console
             console.log('User is signed up. Proceed with the purchase logic.');
-            // You can add your actual purchase logic or redirect the user to the purchase page here
+            
+            // Redirect the user to another page (replace 'newPage.html' with the actual URL)
+            
         }
     });
 });
 
 
 function checkIfUserIsSignedUp() {
-    // Replace 
+    // Replace this with actual logic to check if the user is signed up
     // For demonstration purposes, always return false
     return false;
 }
