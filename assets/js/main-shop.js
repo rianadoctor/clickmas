@@ -25,12 +25,16 @@ if (searchInput) {
 
             // Show suggestions
             showSuggestions();
+
         } else {
             // Clear suggestions if the input doesn't start with 'hat'
             clearSuggestions();
         }
     });
 }
+
+
+
 
 function showSuggestions() {
     // Show a list of suggestions 
