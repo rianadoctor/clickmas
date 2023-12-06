@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = 'sign-up.html';
         } else {
             // If the user is signed up, proceed with the purchase logic
-            // For demonstration purposes, log a message to the console
             console.log('User is signed up. Proceed with the purchase logic.');
             
             // Redirect the user to another page (replace 'newPage.html' with the actual URL)
@@ -33,7 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function checkIfUserIsSignedUp() {
     // Replace this with actual logic to check if the user is signed up
-    // For demonstration purposes, always return false
     return false;
 }
 
