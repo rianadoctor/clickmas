@@ -48,3 +48,67 @@ function checkPasswordMatch(repeatedPassword) {
         }
     }
 }
+
+
+
+function updateRegisterButtonState() {
+    const nameInput = document.getElementById('form3Example1c');
+    const emailInput = document.getElementById('form3Example3c');
+    const passwordInput = document.getElementById('form3Example4c');
+    const repeatedPasswordInput = document.getElementById('form3Example4cd');
+    const termsCheckbox = document.getElementById('form2Example3c');
+    const registerButton = document.getElementById('register');
+
+    const isNameValid = nameInput.checkValidity();
+    const isEmailValid = emailInput.checkValidity();
+    const isPasswordValid = passwordInput.checkValidity();
+    const isRepeatedPasswordValid = repeatedPasswordInput.checkValidity();
+    const areTermsAccepted = termsCheckbox.checked;
+
+    const isFormValid = isNameValid && isEmailValid && isPasswordValid && isRepeatedPasswordValid && areTermsAccepted;
+
+    registerButton.disabled = !isFormValid;
+}
+
+
+document.getElementById('register').addEventListener('click', async function() {
+    if (this.disabled) {
+        // Registration button is disabled, do not proceed
+        return;
+    }
+
+    // Get user input values
+    const name = document.getElementById('form3Example1c').value;
+    const email = document.getElementById('form3Example3c').value;
+    const password = document.getElementById('form3Example4c').value;
+
+    // Simulate sending registration data to the server (replace with actual server-side code)
+    try {
+        const response = await fetch('/api/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, password }),
+        });
+
+        if (response.ok) {
+            // Registration successful, you can navigate back
+            window.history.back();
+        } else {
+            // Handle registration error (isplay an error message)
+            console.error('Registration failed:', response.statusText);
+        }
+    } catch (error) {
+        console.error('Error during registration:', error.message);
+    }
+});
+
+
+
+
+document.getElementById('form3Example1c').addEventListener('input', updateRegisterButtonState);
+document.getElementById('form3Example3c').addEventListener('input', updateRegisterButtonState);
+document.getElementById('form3Example4c').addEventListener('input', updateRegisterButtonState);
+document.getElementById('form3Example4cd').addEventListener('input', updateRegisterButtonState);
+document.getElementById('form2Example3c').addEventListener('change', updateRegisterButtonState);

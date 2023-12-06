@@ -48,12 +48,11 @@ function updateProductDetails(productId) {
 
     // Additional text updates
     document.getElementById('name').textContent = productDetails.name;
-    document.getElementById('description').textContent = productDetails.description;
 
-
-
-    // Updating image source 
+    updateCountdownInDescription(productDetails);
     document.getElementById('productImage').src = '../assets/img/' + productDetails.imageFileName; 
+
+
 
 }
 
@@ -101,7 +100,7 @@ function getProductDetailsById(productId) {
     
         //Caps
         33:  { subtotal: 98.00,  shipping: 2.00,   total: 4818.00, price: 50, name: 'Pink Cap', description: 'Super Pixel Vacuum', imageFileName:'gc-1.png'},
-        34: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Selling OUT SOON!', imageFileName:'gc-2.png' },
+        34: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Selling OUT SOON!', sellOutSoon: true, sellOutTime: Math.floor(Date.now() / 1000) + 1, imageFileName:'gc-2.png' },
         35: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'gc-3.png' },
         36: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'gc-4.png' },
         37: { subtotal: 150.00, shipping: 100.00, total: 250.00, price: 150, name: 'HAT', description: 'Super Pixel Phone', imageFileName:'gc-5.png' },
@@ -114,4 +113,48 @@ function getProductDetailsById(productId) {
 
     // Convert productId to string to handle both numeric and string input
     return productDetails[key] || null;
+}
+
+
+
+function updateCountdownInDescription(productDetails) {
+    const descriptionElement = document.getElementById('description');
+
+    if (productDetails.sellOutSoon) {
+        // Calculate the remaining time (in seconds)
+        const remainingTime = productDetails.sellOutTime - Math.floor(Date.now() / 1000);
+
+        // Display the countdown in the description
+        displayCountdownInDescription(remainingTime, descriptionElement);
+
+        // Redirect when countdown reaches zero
+        if (remainingTime <= 0) {
+            window.location.href = 'loser.html'; // Replace with your actual URL
+        }
+    } else {
+        // If not selling out soon, use the regular description
+        descriptionElement.textContent = productDetails.description;
+    }
+}
+
+
+// Function to display countdown in the product description
+function displayCountdownInDescription(remainingTime, descriptionElement) {
+    function updateCountdown() {
+        const minutes = Math.floor(remainingTime / 60);
+        const seconds = remainingTime % 60;
+
+        // Set the description to the countdown
+        descriptionElement.textContent = `BUY NOW; Time Left: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        if (remainingTime <= 0) {
+            clearInterval(countdownInterval);
+            descriptionElement.textContent = 'SOLD OUT';
+        } else {
+            remainingTime--;
+        }
+    }
+
+    updateCountdown(); // Call initially to avoid delay
+    const countdownInterval = setInterval(updateCountdown, 1000);
 }

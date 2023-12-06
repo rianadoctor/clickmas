@@ -57,9 +57,9 @@
                         <div class="d-flex flex-row align-items-center mb-4">
                           <i class="fas fa-key fa-lg me-3 fa-fw"></i>
                           <div class="form-outline flex-fill mb-0">
-                            <input type="password" id="form3Example4cd" class="form-control" />
+                            <input type="password" id="form3Example4cd" class="form-control" oninput="checkPasswordMatch(this.value)" required/>
                             <label class="form-label" for="form3Example4cd">Repeat your password</label>
-                            <ul id="password-requirements" class="list-group mb-3">
+                            <ul id="password-match" class="list-group mb-3">
                                 <li class="list-group-item list-group-item-danger">Passwords do not match</li>
                             </ul>
                           </div>
@@ -73,7 +73,7 @@
                         </div>
       
                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                          <button id="register" type="button" class="btn btn-primary btn-lg">Register</button>
+                          <button id="register" type="button" class="btn btn-primary btn-lg" disabled>Register</button>
                         </div>
       
                       </form>
@@ -81,8 +81,8 @@
                     </div>
                     <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
       
-                      <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                        class="img-fluid" alt="Sample image">
+                      <img src="../assets/img/logo.png"
+                        class="img-fluid" alt="Sample image" style="width: 500px;">
       
                     </div>
                   </div>
