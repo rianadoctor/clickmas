@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function checkIfUserIsSignedUp() {
     // Replace this with actual logic to check if the user is signed up
-    return false;
+    return true;
 }
 
 function updateProductDetails(productId) {
@@ -200,4 +200,44 @@ function showOverlayWithMessage() {
             document.body.removeChild(overlay);
         }, 1000); // Adjust the duration if needed
     }, 3000); // Adjust the delay before fading if needed
+}
+
+
+// Show the wheel spin popup
+document.getElementById('buyButton').addEventListener('click', function () {
+    document.getElementById('wheelPopup').style.display = 'block';
+});
+
+// Close the wheel spin popup
+function closePopup() {
+    document.getElementById('wheelPopup').style.display = 'none';
+}
+
+// Spin the wheel and display the result
+function spinWheel() {
+    const wheel = document.getElementById('wheel');
+    const resultElement = document.getElementById('result');
+
+    // Generate a random angle for the wheel spin
+    const randomAngle = Math.floor(Math.random() * 360) + 720;
+
+    // Apply the spinning animation
+    wheel.style.transition = 'transform 3s ease-out';
+    wheel.style.transform = `rotate(${randomAngle}deg)`;
+
+    // Clear the result text
+    resultElement.innerText = '';
+
+    // After the spinning animation, display the result
+    setTimeout(() => {
+        const result = getReward(); // You can customize this function to determine the reward
+        resultElement.innerText = `Congratulations! You won ${result}!`;
+    }, 3000);
+}
+
+// Example function to determine the reward
+function getReward() {
+    const rewards = ['iPhone', 'Coupon', 'Free Shipping', '50% Off', 'No Luck'];
+    const randomIndex = Math.floor(Math.random() * rewards.length);
+    return rewards[randomIndex];
 }
