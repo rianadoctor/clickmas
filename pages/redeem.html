@@ -15,7 +15,7 @@
         <div>
 
             <img src="../assets/img/coupon.png" alt="Clickmas Logo" class="coupon" style="width:200px;" onclick="showAdvertisements()" >
-            <div class="coupon-text">No thanks</div>
+            <div class="coupon-text" onclick="goToAnotherPage()">No thanks</div>
         </div>
 
         <div class="overlay" id="overlay1">
@@ -210,6 +210,10 @@
             function subscribe() {
                 alert('Thank you for subscribing!');
                 // Add additional logic for subscription handling if needed
+            }
+
+            function goToAnotherPage() {
+                window.location.href = 'loser.html';
             }
         </script>
 </body>
