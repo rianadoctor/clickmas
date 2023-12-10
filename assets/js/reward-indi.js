@@ -290,6 +290,8 @@ function showResultOnPopup(deg) {
         setTimeout(() => {
             overlay.style.display = 'none';
             overlay.removeChild(resultMessage);
+
+            window.location.href = 'redeem.html';
         }, 1000); // Adjust the duration if needed
     }, 3000); // Adjust the delay before fading if needed
 }
