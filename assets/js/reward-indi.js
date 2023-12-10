@@ -205,39 +205,91 @@ function showOverlayWithMessage() {
 
 // Show the wheel spin popup
 document.getElementById('buyButton').addEventListener('click', function () {
-    document.getElementById('wheelPopup').style.display = 'block';
+    document.getElementById('mainbox').style.display = 'block';
 });
 
 // Close the wheel spin popup
 function closePopup() {
-    document.getElementById('wheelPopup').style.display = 'none';
+    document.getElementById('mainbox').style.display = 'none';
 }
 
 // Spin the wheel and display the result
-function spinWheel() {
-    const wheel = document.getElementById('wheel');
-    const resultElement = document.getElementById('result');
+function rotateWheel() {
+    var min = 1024; // min value
+    var max = 9999; // max value
 
-    // Generate a random angle for the wheel spin
-    const randomAngle = Math.floor(Math.random() * 360) + 720;
+    var deg = Math.floor(Math.random() * (max - min)) + min; // generates the value between min and max
 
-    // Apply the spinning animation
-    wheel.style.transition = 'transform 3s ease-out';
-    wheel.style.transform = `rotate(${randomAngle}deg)`;
+    document.getElementById('box').style.transform = `rotate(${deg}deg`;
 
-    // Clear the result text
-    resultElement.innerText = '';
-
-    // After the spinning animation, display the result
-    setTimeout(() => {
-        const result = getReward(); // You can customize this function to determine the reward
-        resultElement.innerText = `Congratulations! You won ${result}!`;
-    }, 3000);
+    let element = document.getElementById('mainbox');
+    element.classList.remove('animate');
+    
+    setTimeout(function () {
+        element.classList.add('animate');
+        
+        // Show the result after the wheel stops spinning
+        setTimeout(function () {
+            showResultOnPopup(deg);
+        }, 2000); // 5000 = 5 seconds
+    }, 5000); // 5000 = 5 seconds
 }
 
-// Example function to determine the reward
-function getReward() {
-    const rewards = ['iPhone', 'Coupon', 'Free Shipping', '50% Off', 'No Luck'];
-    const randomIndex = Math.floor(Math.random() * rewards.length);
-    return rewards[randomIndex];
+
+// Function to show the result on the wheel spin popup
+function showResultOnPopup(deg) {
+    console.log(`Degrees: ${deg}`);
+
+    // Define the categories and their corresponding degree ranges
+    const categories = [
+        { name: '$2 Off', range: [-45, 45] },
+        { name: '$2 Off', range: [45, 135] },
+        { name: '$2 Off', range: [135, 225] },
+        { name: '$2 Off', range: [225, 315] },
+        { name: '$2 Off', range: [315, 405] },
+        { name: '$2 Off', range: [405, 495] },
+        { name: '$2 Off', range: [495, 585] },
+        { name: '$2 Off', range: [585, 675] }, // Default category
+    ];
+
+    // Offset the degrees by 45 to match the wheel layout
+    const offsetDeg = (deg + 360) % 360;
+
+    // Find the category whose range includes the offset degrees
+    const resultCategory = categories.find(category => offsetDeg >= category.range[0] && offsetDeg < category.range[1]);
+
+    // Check if resultCategory is defined before using it
+    const result = resultCategory ? resultCategory.name : 'Unknown';
+
+
+    // Display the result in the overlay
+    const overlay = document.getElementById('overlay2');
+    overlay.style.display = 'block';
+    overlay.style.position = 'fixed';
+    overlay.style.top = '50%';
+    overlay.style.left = '50%';
+    overlay.style.transform = 'translate(-50%, -50%)';
+
+    const resultMessage = document.createElement('div');
+    resultMessage.classList.add('result-message');
+    resultMessage.style.zIndex = '1000';
+    resultMessage.style.top = '30px'; 
+    resultMessage.style.fontSize = '50px';
+    resultMessage.style.textAlign = 'center';
+    resultMessage.innerText = `You won: ${result}`;
+    overlay.appendChild(resultMessage);
+
+    // Set up the fade-out effect
+    overlay.style.transition = 'opacity 1s ease-in-out';
+
+    // Trigger fading effect after a delay
+    setTimeout(() => {
+        overlay.style.opacity = '0';
+
+        // Remove overlay after fading
+        setTimeout(() => {
+            overlay.style.display = 'none';
+            overlay.removeChild(resultMessage);
+        }, 1000); // Adjust the duration if needed
+    }, 3000); // Adjust the delay before fading if needed
 }
