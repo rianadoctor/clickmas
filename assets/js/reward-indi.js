@@ -180,6 +180,7 @@ function showOverlayWithMessage() {
     const message = document.createElement('div');
     message.classList.add('message');
     message.innerText = 'You found it!';
+    message.style.fontFamily = 'Pixelify Sans, sans-serif';
     overlay.appendChild(message);
 
     message.style.position = 'absolute';
