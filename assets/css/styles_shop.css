@@ -15,7 +15,9 @@
  /* Add this CSS to style the suggestion list */
 
 
-
+.cursor{
+  font-family: "Pixelify Sans", "sans-serif";
+}
 
 #suggestionList a {
   display: block;
