@@ -5,6 +5,8 @@
 .task{
     font-size: 40px;
     text-align: center;
+    width: 98%;
+    margin-left: 1%;
 }
 
 
@@ -78,7 +80,7 @@
 .click{
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 25%;
     text-align: center;
     font-size: 40px;
 
