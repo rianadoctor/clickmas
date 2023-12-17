@@ -1,13 +1,13 @@
-.first{
+header{
     font-family: 'Pixelify Sans', sans-serif;
 }
 
 header {
-    background-color: #b55252;
+    background-color: #fbe5e5;
     padding: 30px;
     text-align: center;
     font-size: 35px;
-    color: white;
+    color: rgb(0, 0, 0);
   }
 
 h2{
@@ -22,7 +22,9 @@ ul{
 }
 
 
-
+body{
+    background-color: #ecc5c5;
+}
 
 * {
     box-sizing: border-box;
@@ -32,7 +34,7 @@ nav {
     float: left;
     width: 30%;
     height: 300px; 
-    background: #ccc;
+    background: #8bcd93;
     padding: 20px;
     border: 2px solid #ddd;
   }
@@ -47,7 +49,7 @@ nav {
     float: left;
     padding: 20px;
     width: 70%;
-    background-color: #f1f1f1;
+    background-color: #ec7171;
     height: 300px; 
     border: 2px solid #ddd;
   }
@@ -69,4 +71,8 @@ nav {
 
 .end{
     height: 1px;
+}
+
+a{
+    color: #000000;
 }
