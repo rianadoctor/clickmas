@@ -3,7 +3,7 @@ header{
 }
 
 header {
-    background-color: #fbe5e5;
+    background-color: #b5e9c1;
     padding: 30px;
     text-align: center;
     font-size: 35px;
@@ -11,7 +11,7 @@ header {
   }
 
 h2{
-    font-size: 30px;
+    font-size: 25px;
 }
 p{
     font-size: 20px;
@@ -23,7 +23,7 @@ ul{
 
 
 body{
-    background-color: #ecc5c5;
+    background-color: #ffffff;
 }
 
 * {
@@ -76,3 +76,15 @@ nav {
 a{
     color: #000000;
 }
+
+footer {
+    background-color: #eed4d4;
+    padding: 10px;
+    text-align: center;
+    color: rgb(3, 0, 0);
+  }
+
+  div{
+    background-color: #eed4d4;
+    
+  }
