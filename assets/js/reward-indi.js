@@ -132,10 +132,10 @@ function updateCountdownInDescription(productDetails) {
 
         // Redirect when countdown reaches zero
         if (remainingTime <= 0) {
-            window.location.href = 'loser.html'; // Replace with your actual URL
+            window.location.href = 'loser.html';
         }
     } else {
-        // If not selling out soon, use the regular description
+        // If not selling out soon use the regular description
         descriptionElement.textContent = productDetails.description;
     }
 }
@@ -173,13 +173,13 @@ function showOverlayWithMessage() {
     overlay.style.left = 0;
     overlay.style.width = '100%';
     overlay.style.height = '100%';
-    overlay.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; // Adjust background color
+    overlay.style.backgroundColor = 'rgba(255, 0, 0, 0.5)'; 
     document.body.appendChild(overlay);
 
     // Message
     const message = document.createElement('div');
     message.classList.add('message');
-    message.innerText = 'You found it!';
+    message.innerText = 'You found it... again!';
     message.style.fontFamily = 'Pixelify Sans, sans-serif';
     overlay.appendChild(message);
 
@@ -293,6 +293,6 @@ function showResultOnPopup(deg) {
             overlay.removeChild(resultMessage);
 
             window.location.href = 'redeem.html';
-        }, 1000); // Adjust the duration if needed
-    }, 3000); // Adjust the delay before fading if needed
+        }, 1000);
+    }, 3000);
 }
